@@ -1,0 +1,49 @@
+.castlist {
+  overflow-x: scroll;
+}
+
+.des {
+  margin-top: 2em;
+  /* margin-bottom: 2em; */
+}
+
+.cast_item {
+  padding: 5px;
+}
+
+.commonone {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.card-body {
+  padding: 0 !important;
+  background-color: white;
+  height: auto !important;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.cast_character {
+  text-align: center;
+  font-size: 0.9em;
+  overflow: normal;
+}
+
+.toppart {
+  margin-bottom: 2em;
+}
+
+.iconpart {
+  margin-top: 1em;
+  margin-left: -2em;
+}
+
+p.pp {
+  margin-bottom: 0em;
+}
+
+a:hover {
+  color: none;
+  text-decoration: none;
+}

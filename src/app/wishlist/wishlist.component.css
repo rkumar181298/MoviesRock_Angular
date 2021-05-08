@@ -1,0 +1,86 @@
+.notfound {
+  text-align: center;
+  color: white;
+  margin-top: 80px;
+}
+.found {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.row {
+  text-align: center;
+}
+
+.poptv {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: #04082f;
+  margin-bottom: 80px;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+:host ::ng-deep .carousel-indicators {
+  bottom: -40px;
+}
+
+:host ::ng-deep .carousel-indicators > li {
+  width: 26px;
+  height: 0;
+  border-radius: 0;
+  margin: 3px;
+  opacity: 0.5;
+}
+
+:host ::ng-deep .carousel-indicators > .active {
+  opacity: 1;
+}
+
+:host ::ng-deep .carousel-control-prev {
+  left: -115px;
+}
+
+:host ::ng-deep .carousel-control-next {
+  right: -115px;
+}
+
+.card a div {
+  visibility: hidden;
+}
+.card a:hover div {
+  visibility: visible;
+}
+
+.card-img-overlay {
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  /* transform: scale(1.1); */
+  height: 75px;
+  top: 174px;
+  position: absolute;
+  left: 7px;
+  width: 93%;
+}
+
+.card-text {
+  left: 14px;
+  bottom: 10px;
+  color: white;
+  opacity: 0.9;
+  text-align: left;
+  font-size: 12px;
+  position: absolute;
+}

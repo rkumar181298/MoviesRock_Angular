@@ -1,0 +1,128 @@
+.caro {
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+
+::ng-deep #mainCaro .carousel-indicators {
+  bottom: 0em !important;
+}
+
+::ng-deep #mainCaro .carousel-indicators > li {
+  width: 26px;
+  height: 3px !important;
+  border-radius: 0;
+  margin: 3px;
+  /* opacity: 0.5; */
+}
+
+::ng-deep #mainCaro.carousel-indicators > .active {
+  opacity: 1 !important;
+}
+
+::ng-deep #mainCaro .carousel-control-prev {
+  left: 4em !important;
+}
+::ng-deep #mainCaro .carousel-control-next {
+  right: 4em !important;
+}
+
+.picsum-img-wrapper {
+  height: 22.18em;
+}
+/* above  */
+.card {
+  background-color: #04082f;
+}
+
+.card:hover img {
+  transform: scale(1.03);
+}
+
+.row {
+  text-align: center;
+}
+.card a div div {
+  visibility: hidden;
+}
+.card a:hover div div {
+  visibility: visible;
+}
+
+.card-img-overlay {
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  top: 245px;
+  left: 134px;
+  right: 134px;
+}
+
+.card-text {
+  left: 8em;
+  bottom: 2em;
+  color: white;
+  font-size: 1em;
+  position: absolute;
+}
+
+.crop {
+  width: 100%;
+  height: 25em;
+  overflow: hidden;
+}
+
+.crop2 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.crop img {
+  width: 80%;
+}
+
+.crop2 img {
+  width: 100%;
+}
+
+:focus {
+  outline: 0 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  ::ng-deep #mainCaro .carousel-control-prev {
+    left: 0em !important;
+  }
+  ::ng-deep #mainCaro .carousel-control-next {
+    right: 0em !important;
+  }
+
+  .crop {
+    width: 100%;
+    height: 0em;
+    overflow: hidden;
+  }
+  .crop img {
+    width: 100%;
+  }
+  .card-img-overlay {
+    top: 7em;
+    left: 0em;
+    right: 0em;
+  }
+  .card a div div {
+    visibility: visible;
+  }
+  .card-text {
+    left: 3em;
+    bottom: 0em;
+    color: white;
+    font-size: 1em;
+    position: absolute;
+  }
+}

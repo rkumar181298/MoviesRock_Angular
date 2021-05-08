@@ -1,0 +1,121 @@
+/* @include media-breakpoint-between(sm, md, xl) { */
+.card {
+  background-color: #04082f;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.row {
+  text-align: center;
+}
+
+.poptv {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+:host ::ng-deep .carousel-indicators {
+  bottom: -4em;
+}
+
+:host ::ng-deep .carousel-indicators > li {
+  width: 26px;
+  height: 4px;
+  border-radius: 0;
+  margin: 3px;
+  opacity: 0.5;
+}
+
+:host ::ng-deep .carousel-indicators > .active {
+  opacity: 1;
+}
+
+:host ::ng-deep .carousel-control-prev {
+  left: -115px;
+}
+
+:host ::ng-deep .carousel-control-next {
+  right: -115px;
+}
+
+.card a div.card-img-overlay {
+  visibility: hidden;
+}
+.card a:hover div.card-img-overlay {
+  visibility: visible;
+}
+
+.card-img-overlay {
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  /* transform: scale(1.1); */
+  height: 75px;
+  top: 170px;
+  position: absolute;
+  left: 7px;
+  width: 93%;
+}
+
+.card-text {
+  left: 14px;
+  bottom: 10px;
+  color: white;
+  opacity: 0.9;
+  text-align: left;
+  font-size: 12px;
+  position: absolute;
+}
+
+/* } */
+
+.overlay2 {
+  visibility: visible;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+
+  top: 12.125em;
+  position: absolute;
+  left: 0.875em;
+  width: 90%;
+  height: 12.5em;
+}
+
+.card2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #04082f;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+:focus {
+  outline: 0 !important;
+}
+@media only screen and (max-width: 600px) {
+  .card2:hover {
+    transform: scale(1.05);
+  }
+  .card-text {
+    bottom: 1.625em;
+  }
+}

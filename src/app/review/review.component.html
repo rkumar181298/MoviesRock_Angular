@@ -1,0 +1,33 @@
+<div class="des">
+    <h3 class="commonone">Reviews &nbsp;&nbsp; <span class="css_opacity">{{numofreviews}}</span></h3>
+</div>
+<div class="des"> 
+    <!-- d-flex justify-content-center -->
+    <!-- justify-content-around -->
+    <div class="reviewcard row justify-content-around " *ngFor="let item of detail_reviews" style="background-color: white;">
+        <img class="col-8 col-xs-8 col-sm-12 col-md-2 col-lg-2  pic" *ngIf="item.author_details.avatar_path!=null && item.author_details.avatar_path.slice(0,5)=='/http' && !isSmallScreen" src="{{item.author_details.avatar_path.slice(1)}}" >
+        <img class="col-8 col-xs-8 col-sm-12 col-md-2 col-lg-2  pic" *ngIf="item.author_details.avatar_path!=null && item.author_details.avatar_path.slice(0,5)!='/http' && !isSmallScreen" src="https://image.tmdb.org/t/p/original{{item.author_details.avatar_path}}" >
+        <img class="col-8 col-xs-8 col-sm-12 col-md-2 col-lg-2 pic" *ngIf="item.author_details.avatar_path==null && !isSmallScreen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHnPmUvFLjjmoYWAbLTEmLLIRCPpV_OgxCVA&usqp=CAU" >
+
+        <img class="col-8 col-xs-8 col-sm-12 col-md-2 col-lg-2  pic2" *ngIf="item.author_details.avatar_path!=null && item.author_details.avatar_path.slice(0,5)=='/http' && isSmallScreen" src="{{item.author_details.avatar_path.slice(1)}}" >
+        <img class="col-8 col-xs-8 col-sm-12 col-md-2 col-lg-2  pic2" *ngIf="item.author_details.avatar_path!=null && item.author_details.avatar_path.slice(0,5)!='/http' && isSmallScreen" src="https://image.tmdb.org/t/p/original{{item.author_details.avatar_path}}" >
+        <img class="col-8 col-xs-8 col-sm-12 col-md-2 col-lg-2 pic2" *ngIf="item.author_details.avatar_path==null && isSmallScreen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHnPmUvFLjjmoYWAbLTEmLLIRCPpV_OgxCVA&usqp=CAU" >
+        
+        <div class= "col-12 col-xs-12 col-sm-12 col-md-9 col-lg-9 " style="margin-top: 2em;">
+                <p class = "rv_row1" *ngIf="item.author_details.rating!=null && !isSmallScreen"> A review created by {{item.author}} &nbsp;&nbsp;<span class="notification "> &#9733;&nbsp;{{item.author_details.rating}}</span> </p> 
+                <p class = "rv_row1" *ngIf="item.author_details.rating==null && !isSmallScreen"> A review created by {{item.author}} &nbsp;&nbsp;<span class="notification "> &#9733;&nbsp;0</span> </p> 
+                <p class = "rv_row1" *ngIf="isSmallScreen"> A review created by {{item.author}}</p> 
+                <p class="notification smalln" *ngIf="item.author_details.rating!=null && isSmallScreen"> &#9733;&nbsp;{{item.author_details.rating}}</p> 
+                <p class="notification smalln" *ngIf="item.author_details.rating==null && isSmallScreen"> &#9733;&nbsp;0</p> 
+
+                <p class = "rv_row2 css_opacity "> Written by {{item.author}} on {{retrieveDate(item.created_at)}}</p>
+                <p class = "rv_row3 review_content_inactive " *ngIf="!reading" > {{item.content}}</p>
+                <p class = "rv_row3" *ngIf="reading"> {{item.content}}</p>
+                <div>
+                    <a class ="readmore" href="{{item.url}}" target="_blank" *ngIf="!reading" >Read the rest</a>
+                    <!-- <a class ="readmore" type="button" *ngIf="reading" (click)="readMore()">Less</a> -->
+                </div>
+            
+        </div>
+    </div>
+</div>

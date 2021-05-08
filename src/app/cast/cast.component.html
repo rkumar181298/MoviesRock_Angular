@@ -1,0 +1,59 @@
+<div class="des">
+    <h3 class="commonone">Full Cast and Crew</h3>
+</div>
+
+<div class="container-fluid">
+    <div class ="row flex-row flex-nowrap castlist" >
+        <div class="col-6 col-xs-6 col-sm-6 col-md-2 col-lg-2 btn cast_item"  *ngFor="let item of all_cast; let i = index" (click)="openLg(content,item.id)"  >
+                <ng-template #content let-modal>
+                    <div class="modal-header">
+                    <h4 class="modal-title">{{item.name}}</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class ="row toppart">
+                            <div class ="col-12 col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <img src="https://image.tmdb.org/t/p/w500{{item.profile_path}}" style="width:100%" >
+                            </div>
+                            <div class ="col-12 col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                                <p class="pp" *ngIf='allresults_person.birthday!=null && allresults_person.birthday!=undefined'>Birth: {{allresults_person.birthday}}</p>
+                                <p class="pp" *ngIf='allresults_person.place_of_birth!=null && allresults_person.place_of_birth!=undefined'>Birth Place: {{allresults_person.place_of_birth}}</p>
+                                <p class="pp" *ngIf='allresults_person.gender!=null && allresults_person.gender!=undefined'>Gender: {{getGender(allresults_person.gender)}}</p>
+                                <p class="pp" *ngIf='allresults_person.known_for_department!=null && allresults_person.known_for_department!=""'>Known for: {{allresults_person.known_for_department}}</p>
+                                <p class="pp" *ngIf='allresults_person.also_known_as!=null && allresults_person.also_known_as.length!=0'>Also Known as: {{getOtherNames(allresults_person.also_known_as)}}</p>
+                                <div class="col-12 iconpart">
+                                    <a class="fab fa-imdb col-1 col-xs-1 col-sm-1 col-md-1 col-lg-1 fa-2x" style='color:#e9b500' target="_blank" 
+                                    href="https://www.imdb.com/name/{{allresults_link.imdb_id}}" ngbPopover="Visit IMDB"
+                                    *ngIf="allresults_link.imdb_id!=null && allresults_link.imdb_id!=''"></a>
+
+                                    <a class="fab fa-instagram col-1 col-xs-1 col-sm-1 col-md-1 col-lg-1 fa-2x" style='color:#9a0092' target="_blank" 
+                                    href="https://www.instagram.com/{{allresults_link.instagram_id}}" ngbPopover="Visit Instagram"
+                                    *ngIf="allresults_link.instagram_id!=null && allresults_link.instagram_id!=''"></a>
+
+                                    <a class="fab fa-facebook-square col-1 col-xs-1 col-sm-1 col-md-1 col-lg-1 fa-2x" style='color:#2300ff' target="_blank" 
+                                    href="https://www.facebook.com/{{allresults_link.facebook_id}}"
+                                    ngbPopover="Visit Facebook"
+                                    *ngIf="allresults_link.facebook_id!=null && allresults_link.facebook_id!=''"></a>
+
+                                    <a class="fab fa-twitter col-1 col-xs-1 col-sm-1 col-md-1 col-lg-1 fa-2x" target="_blank" 
+                                    href="https://twitter.com/{{allresults_link.twitter_id}}" ngbPopover="Visit Twitter"
+                                    *ngIf="allresults_link.twitter_id!=null && allresults_link.twitter_id!=''"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 *ngIf="allresults_person.biography!=null && allresults_person.biography!=''" >Biography</h3>
+                        <p *ngIf="allresults_person.biography!=null && allresults_person.biography!=''">{{allresults_person.biography}}</p>
+                    </div>
+                </ng-template>
+                <img src="https://image.tmdb.org/t/p/w500{{item.profile_path}}" style="width:100%" >
+                <div class="card-body">
+                    <p class="cast_name"><b>{{item.name}}<br>AS</b><br>
+                        <span class="cast_character">{{item.character}}</span>
+                    </p>
+                </div>
+        </div>
+    </div>
+</div>
+

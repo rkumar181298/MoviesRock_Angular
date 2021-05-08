@@ -1,0 +1,21 @@
+<div class='container'>
+    <div *ngIf="isEmpty">
+    <h1 class= "notfound">No items found in Watchlist.</h1>
+    </div>
+
+<div *ngIf="!isEmpty">
+    <h1 class="found">My Watchlist</h1>
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2  card" *ngFor="let item of savedVideo; let i = index">
+            <a href="/watch/{{item.media_type}}/{{item.id}}">
+                <img class="card-img" src="https://image.tmdb.org/t/p/w500{{item.url}}" style="width:100%">
+                <div class="card-img-overlay cc">
+                        <p class="card-text">
+                            {{item.name}}
+                        </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+

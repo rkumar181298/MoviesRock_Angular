@@ -1,0 +1,224 @@
+.details {
+  margin-top: 30px;
+  /* font-family: "Calibri"; */
+  font-family: "Open Sans", sans-serif;
+}
+
+/* .icon {
+  display: inline;
+} */
+
+/* .castlist {
+  overflow-x: scroll;
+} */
+/* 
+.css_tagline {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+.css_name {
+  font-weight: bold;
+  font-size: 3em;
+}
+.css_release {
+  font-size: 1.2em;
+}
+
+.css_gen {
+  font-size: 0.8em;
+}
+.css_watchlist {
+  font-size: 0.9em;
+}
+
+.css_opacity {
+  opacity: 0.6;
+} */
+
+/* .rightpart {
+  min-height: 480px;
+} */
+
+/* .cast_item {
+  padding: 5px;
+}
+.card-body {
+  padding: 0 !important;
+  background-color: white;
+  height: auto !important;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.cast_character {
+  text-align: center;
+  font-size: 0.9em;
+  overflow: normal;
+} */
+
+/* .reviewcard {
+  margin-bottom: 30px;
+  min-height: 300px;
+  border-radius: 1em;
+} */
+
+/* .review_content_inactive {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+
+/* .review_content_active {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.rv_row1 {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.rv_row2 {
+  color: black;
+}
+
+.rv_row3 {
+  color: black;
+  margin-bottom: 2em;
+}
+
+.review_content_active {
+  line-height: 1em;
+  font-size: 0.9em;
+}
+
+.des {
+  margin-top: 2em;
+} */
+
+/* .commonone {
+  font-weight: bold;
+  font-size: 1.3em;
+} */
+
+/* Card and hover */
+/* .card {
+  background-color: #04082f;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.recommend {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+:host ::ng-deep .carousel-indicators {
+  bottom: -40px;
+}
+
+:host ::ng-deep .carousel-indicators > li {
+  width: 26px;
+  height: 0;
+  border-radius: 0;
+  margin: 3px;
+  opacity: 0.5;
+}
+
+:host ::ng-deep .carousel-indicators > .active {
+  opacity: 1;
+}
+
+:host ::ng-deep .carousel-control-prev {
+  left: -115px;
+}
+
+:host ::ng-deep .carousel-control-next {
+  right: -115px;
+}
+
+.card a div {
+  visibility: hidden;
+}
+.card a:hover div {
+  visibility: visible;
+}
+
+.card-img-overlay {
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  transform: scale(1.1);
+  height: 75px;
+  top: 170px;
+  position: absolute;
+}
+
+.card-text {
+  left: 23px;
+  bottom: 10px;
+  color: white;
+  opacity: 0.9;
+  text-align: left;
+  font-size: 12px;
+  position: absolute;
+} */
+
+/* .ss {
+  margin-top: 1em;
+} */
+
+/* .readmore {
+  color: blue;
+  text-decoration: underline;
+} */
+
+/* .addlist {
+  margin-top: 1em;
+} */
+
+/* .notification {
+  color: white;
+  background-color: black;
+  border-radius: 1em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+}
+
+.pic {
+  height: 4.5em;
+  border-radius: 80%;
+  margin-top: 3em;
+  max-width: 7.1em;
+} */
+
+/* @include media-breakpoint-down(sm) {
+  .icon {
+    width: 15%;
+  }
+}
+
+@include media-breakpoint-between(xs, sm, md) {
+  .rightpart {
+    min-height: 1px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .rightpart {
+    min-height: 480px;
+    background-color: green;
+  }
+} */

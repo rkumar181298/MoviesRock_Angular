@@ -1,0 +1,42 @@
+.navbar-brand {
+  margin-left: 30px !important;
+}
+
+.btn {
+  text-align: right;
+}
+
+.nav-item {
+  margin-right: 10px !important;
+}
+
+.search {
+  /* margin-right: 20px !important; */
+  position: absolute;
+  right: 8em;
+}
+
+.listele {
+  /* background-color: black; */
+  color: white;
+  text-decoration: none;
+}
+
+.bg-dark {
+  background-color: black !important;
+}
+
+.form-control {
+  background-color: black;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+:host ::ng-deep .dropdown-menu.show {
+  background-color: black !important;
+}
+
+:focus {
+  outline: 0 !important;
+}

@@ -1,0 +1,40 @@
+<div class="container-fluid caro" id ="mainCaro">
+  <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" [showNavigationIndicators]="false" (slide)="onSlide($event)" *ngIf="isSmallScreen" >
+    <ng-template ngbSlide *ngFor="let ele of playingmvs;index as i">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 card" >
+            <a href="/watch/movie/{{ele.id}}">
+              <div class="crop2">
+                <img src="https://image.tmdb.org/t/p/original{{ele.backdrop_path}}">
+                  <div class="card-img-overlay">
+                    <p class="card-text">
+                      {{ele.title}}
+                    </p>
+                  </div>
+              </div>
+            </a>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)" *ngIf="!isSmallScreen">
+    <ng-template ngbSlide *ngFor="let ele of playingmvs;index as i">
+      <div class="row">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 card" >
+            <a href="/watch/movie/{{ele.id}}">
+              <div class="crop">
+                <img src="https://image.tmdb.org/t/p/original{{ele.backdrop_path}}">
+                  <div class="card-img-overlay">
+                    <p class="card-text">
+                      {{ele.title}}
+                    </p>
+                  </div>
+              </div>
+            </a>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+</div>

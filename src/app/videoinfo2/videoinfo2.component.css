@@ -1,0 +1,20 @@
+.commonone {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.ss {
+  margin-top: 1em;
+}
+.des {
+  margin-top: 2em;
+  /* margin-bottom: 2em; */
+}
+
+.icon {
+  margin-left: 1px;
+}
+
+a:hover {
+  color: none;
+  text-decoration: none;
+}

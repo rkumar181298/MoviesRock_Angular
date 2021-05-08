@@ -1,0 +1,51 @@
+<div class = "rightpart">
+    <h1 class="css_name">{{detail_name}}</h1>
+    <p class="css_tagline" *ngIf="detail_tagline!=null">{{detail_tagline}}</p>
+
+    <p class="css_release" *ngIf="detail_release!=null && detail_vote_avg!=null && detail_runtime!=null">{{detail_release}} | &#9733; {{detail_vote_avg}} | {{detail_runtime}}</p>
+    <p class="css_release" *ngIf="detail_release!=null && detail_vote_avg==null && detail_runtime==null">{{detail_release}} | &#9733; N/A | N/A</p>
+    <p class="css_release" *ngIf="detail_release==null && detail_vote_avg!=null && detail_runtime==null">N/A | &#9733; {{detail_vote_avg}} | N/A</p>
+    <p class="css_release" *ngIf="detail_release==null && detail_vote_avg==null && detail_runtime!=null">N/A | &#9733; N/A | {{detail_runtime}}</p>
+    <p class="css_release" *ngIf="detail_release!=null && detail_vote_avg!=null && detail_runtime==null">{{detail_release}} | &#9733; {{detail_vote_avg}} | N/A</p>
+    <p class="css_release" *ngIf="detail_release==null && detail_vote_avg!=null && detail_runtime!=null"> N/A | &#9733; {{detail_vote_avg}} | {{detail_runtime}}</p>
+    <p class="css_release" *ngIf="detail_release!=null && detail_vote_avg==null && detail_runtime!=null">{{detail_release}} | &#9733;  N/A | {{detail_runtime}}</p>
+
+    <p><span class="css_gen"><b>Genres: </b></span><span class="css_gen2">{{detail_genres}}</span></p>
+    <p><span class="css_gen"><b>Spoken Languages: </b></span><span class="css_gen2">{{detail_languages}}</span></p>
+    <button type="button" id ="add" (click)="saveToMyList()" class="btn btn-primary css_watchlist" *ngIf="!existInList">Add to Watchlist</button>
+    <button type="button" id ="rm" (click)="rmFromMyList()" class="btn btn-primary css_watchlist" *ngIf="existInList">Remove from Watchlist</button>
+    <!-- alert boxes -->
+    <div class="alert alert-success addlist alert-dismissible css_watchlist" role="alert" id ="success-alert" *ngIf="existInList">
+        Added to Watchlist.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-danger addlist alert-dismissible css_watchlist" role="alert" id ="remove-alert" *ngIf="!existInList">
+        Removed from Watchlist.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12  des">
+        <h3 class= "commonone"><b>Description</b></h3>
+        <p>{{detail_overview}}</p>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 ">
+        <h3 class ="ss commonone"><b>Share</b></h3>
+    </div>
+
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+    Twitter
+        <a class="fab fa-twitter col-xs-6 col-sm-6 col-md-6 col-lg-6 fa-2x icon" target="_blank" href="https://twitter.com/intent/tweet?text=Hello%20world"
+        data-size="large">
+        </a>
+        Facebook
+        <a class="fab fa-facebook-square col-xs-6 col-sm-6 col-md-6 col-lg-6 fa-2x icon" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" >
+        </a>
+    </div>
+
+</div> -->

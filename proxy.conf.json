@@ -1,0 +1,12 @@
+
+{
+    "/youtube": {
+        "target": "https://movie-web-571.wn.r.appspot.com",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/youtube": ""
+          }
+    }
+}

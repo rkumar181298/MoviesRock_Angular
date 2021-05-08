@@ -1,0 +1,8 @@
+.footerText {
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 10px;
+  /* margin-top: 20px; */
+  position: relative;
+}

@@ -1,0 +1,53 @@
+<div class="container-fluid" id="similar" *ngIf="!isEmpty">
+    <!-- <h3 *ngIf='detail_type =="movie"' class="commonone des">Similar Movies</h3>
+    <h3 *ngIf='detail_type =="tv"' class="commonone des">Similar TVs</h3> -->
+
+    <h3 *ngIf='isSmallScreen && detail_type =="movie"' style="text-align: center;"><b>Similar Movies</b></h3>
+    <h3 *ngIf='!isSmallScreen && detail_type =="movie"' class="commonone des"><b>Similar Movies</b></h3>
+
+    <h3 *ngIf='isSmallScreen && detail_type =="tv"' style="text-align: center;"><b>Similar TVs</b></h3>
+    <h3 *ngIf='!isSmallScreen && detail_type =="tv"' class="commonone des"><b>Similar TVs</b></h3>
+
+
+    <div class="text-left container similar des">
+        <ngb-carousel #carousel interval="0" class ="similar" [showNavigationIndicators]="false" *ngIf="isSmallScreen">
+            <ng-template ngbSlide *ngFor="let item of detail_similar">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-9 col-xs-9 col-sm-9 col-md-2 col-lg-2 card2">
+                        <a href="/watch/{{detail_type}}/{{item.id}}">
+                            <img class="card-img" src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" style="width:100%">
+                            <div class="overlay2">
+                                    <p *ngIf='detail_type =="movie"' class="card-text">
+                                        {{item.title}}
+                                    </p>
+                                    <p *ngIf='detail_type =="tv"'class="card-text">
+                                        {{item.name}}
+                                    </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+
+        <ngb-carousel #carousel interval="0" class ="similar" *ngIf="!isSmallScreen">
+            <ng-template ngbSlide *ngFor="let group of temp3">
+                <div class="row">
+                    <div class="col-9 col-xs-9 col-sm-9 col-md-2 col-lg-2  card" *ngFor="let item of group; let i = index">
+                        <a href="/watch/{{detail_type}}/{{item.id}}">
+                            <img class="card-img" src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" style="width:100%">
+                            <div class="card-img-overlay" style="top: 157px;">
+                                    <p *ngIf='detail_type =="movie"' class="card-text">
+                                        {{item.title}}
+                                    </p>
+                                    <p *ngIf='detail_type =="tv"'class="card-text">
+                                        {{item.name}}
+                                    </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>    
+</div>

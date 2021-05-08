@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top text-right" id="NV">
+    <a class="navbar-brand" href="/">Moviesrock</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" id="coll"></span>
+      </button>
+    <div class="collapse navbar-collapse" id ="navbarText">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                    <!-- <a class="nav-link" [routerLink]="['']" routerLinkActive="active" >Home</a> -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mylist">My List</a>
+                    <!-- <a class="nav-link" [routerLink]="['/mylist']" routerLinkActive="active" >My List</a> -->
+                </li>
+            </ul>
+            <ng-template #rt let-r="result" let-t="term" >
+                <!-- <a class = "listele" [href] ='"/watch/"+ r.media_type + "/" + r.id'> -->
+                <a class = "listele" href ="/watch/{{r.media_type}}/{{r.id}}"> 
+                <img [src]='"https://image.tmdb.org/t/p/w500" + r["backdrop_path"]' class="mr-0" style="width: 5em">
+                <ngb-highlight *ngIf ="r.media_type=='movie'" [result]="r.title" style="margin-left: 10px;"></ngb-highlight>
+                <ngb-highlight *ngIf ="r.media_type=='tv'" [result]="r.name" style="margin-left: 10px;"></ngb-highlight>
+                </a>    
+            </ng-template>
+
+            <!-- Different Search Bar Position based on different resolution-->
+            <form class="form-inline my-2 my-lg-0" role="search" *ngIf="isSmallScreen"  >
+                <input id="typeahead-basic" type="text" class="form-control  mr-sm-2" [ngModelOptions]="{standalone: true}" [(ngModel)]="model" [ngbTypeahead]="search" (selectItem)="onSelect($event)"
+                [resultTemplate]="rt"
+                placeholder="Search"
+                [resultFormatter]="resultFormatBandListValue"
+                [inputFormatter]="inputFormatBandListValue">
+            </form>
+            <form class="form-inline my-2 my-lg-0 search" role="search" *ngIf="!isSmallScreen"  >
+                <input id="typeahead-basic" type="text" class="form-control  mr-sm-2" [ngModelOptions]="{standalone: true}" [(ngModel)]="model" [ngbTypeahead]="search" (selectItem)="onSelect($event)"
+                [resultTemplate]="rt"
+                placeholder="Search"
+                [resultFormatter]="resultFormatBandListValue"
+                [inputFormatter]="inputFormatBandListValue">
+            </form>
+    </div>
+</nav>

@@ -1,0 +1,34 @@
+.css_tagline {
+  font-size: 1.2em;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.css_name {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+.css_release {
+  font-size: 1.2em;
+  opacity: 0.8;
+}
+.css_gen {
+  font-size: 1em;
+}
+
+.css_gen2 {
+  font-size: 1em;
+  opacity: 0.8;
+}
+
+.css_watchlist {
+  font-size: 0.9em;
+}
+
+.css_opacity {
+  opacity: 0.6;
+}
+
+.addlist {
+  margin-top: 1em;
+}
