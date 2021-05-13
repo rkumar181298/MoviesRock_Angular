@@ -28,33 +28,33 @@ export class MovService {
   getPlayingMV(){
     // return this.http.get('http://localhost:9000/playingmv');
     // https://movie-web-571.wn.r.appspot.com/
-    return this.http.get('https://api.themoviedb.org/3/movie/now_playing?api_key=d29d9b759a709761ab54c2f27ad012b3&language=en-US&page=1');
+    return this.http.get('https://api.themoviedb.org/3/movie/now_playing?api_key=<your api key>&language=en-US&page=1');
   }
   getPopMV():Promise<any>{
     // return this.http.get('http://localhost:9000/popularmv').toPromise();
-    return this.http.get('https://api.themoviedb.org/3/movie/popular?api_key=d29d9b759a709761ab54c2f27ad012b3&language=en-US&page=1').toPromise();
+    return this.http.get('https://api.themoviedb.org/3/movie/popular?api_key=<your api key>&language=en-US&page=1').toPromise();
   }
   getTopMV():Promise<any>{
     // return this.http.get('http://localhost:9000/topratemv').toPromise();
-    return this.http.get('https://api.themoviedb.org/3/movie/top_rated?api_key=d29d9b759a709761ab54c2f27ad012b3&language=en-US&page=1').toPromise();
+    return this.http.get('https://api.themoviedb.org/3/movie/top_rated?api_key=<your api key>&language=en-US&page=1').toPromise();
   }
   getTendingMV():Promise<any>{
     // return this.http.get('http://localhost:9000/trendingmv').toPromise();
-    return this.http.get('https://api.themoviedb.org/3/trending/movie/day?api_key=d29d9b759a709761ab54c2f27ad012b3').toPromise();
+    return this.http.get('https://api.themoviedb.org/3/trending/movie/day?api_key=<your api key>').toPromise();
   }
 
   // TVS
   getPopTV():Promise<any>{
     // return this.http.get('http://localhost:9000/populartv').toPromise();
-    return this.http.get('https://api.themoviedb.org/3/tv/popular?api_key=d29d9b759a709761ab54c2f27ad012b3&language=en-US&page=1').toPromise();
+    return this.http.get('https://api.themoviedb.org/3/tv/popular?api_key=<your api key>&language=en-US&page=1').toPromise();
   }
   getTopTV():Promise<any>{
     // return this.http.get('http://localhost:9000/topratetv').toPromise();
-    return this.http.get('https://api.themoviedb.org/3/tv/top_rated?api_key=d29d9b759a709761ab54c2f27ad012b3&language=en-US&page=1').toPromise();
+    return this.http.get('https://api.themoviedb.org/3/tv/top_rated?api_key=<your api key>&language=en-US&page=1').toPromise();
   }
   getTendingTV():Promise<any>{
     // return this.http.get('http://localhost:9000/trendingtv').toPromise();
-    return this.http.get('https://api.themoviedb.org/3/trending/tv/day?api_key=d29d9b759a709761ab54c2f27ad012b3').toPromise();
+    return this.http.get('https://api.themoviedb.org/3/trending/tv/day?api_key=<your api key>').toPromise();
   }
 
   //Search Bar
@@ -86,7 +86,7 @@ export class MovService {
 
   getYoutube(tp:string,id:string){
     // return this.http.get('http://localhost:9000/youtube/'+tp+'/'+id);
-    return this.http.get(`https://api.themoviedb.org/3/${tp}/${id}/videos?api_key=d29d9b759a709761ab54c2f27ad012b3&language=en-US`);
+    return this.http.get(`https://api.themoviedb.org/3/${tp}/${id}/videos?api_key=<your api key>&language=en-US`);
   }
 
   // getYoutube(tp:string,id:string): Observable<any> {
